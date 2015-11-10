@@ -6,7 +6,7 @@ $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
 var bio = {
 	"contacts": {
-		"mobile":"442154",
+		"mobile":"4421545",
 		"email": "s4vr@outlook.com",
 		"github": "s4vr",
 		"twitter": "@_abrahamsc",
