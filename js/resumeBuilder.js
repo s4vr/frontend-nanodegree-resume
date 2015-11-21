@@ -1,3 +1,4 @@
+
 var name = "Abraham";
 var formattedName = HTMLheaderName.replace("%data%", name);
 var role = "Software Engineer";
@@ -24,7 +25,6 @@ var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
 var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
 var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 var formattedwelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-//var formattedSkills = HTMLskills.replace("%data%", bio.skills[0]);
 var formattedbioPic = HTMLbioPic.replace("%data%", bio.bioPic);
 
 $("#topContacts").append(formattedMobile);
@@ -35,6 +35,20 @@ $("#topContacts").append(formattedLocation);
 $("#header").append(formattedbioPic);
 $("#header").append(formattedwelcomeMessage);
 
-//$("#topContacts").append(formattedSkills);
-
+if(bio.skills.length > 0){
+	$("#header").append(HTMLskillsStart);
+	
+	var formattedSkill = HTMLskills.replace(
+		"%data%", bio.skills[0]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%",
+	bio.skills[1]);
+	$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%",
+	bio.skills[2]);
+	/*$("#skills").append(formattedSkill);
+	formattedSkill = HTMLskills.replace("%data%",
+	bio.skills[3]);*/
+	$("#skills").append(formattedSkill);	
+}
 
